@@ -1,0 +1,161 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos */
+#banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 250px;
+}
+
+#servicos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#servicos ul li {
+    margin-bottom: 10px;
+}
+.galeria-imagem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #CCFF33; /* fundo verde */
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria-imagem img {
+    width: calc(33.33% - 30px); /* aproximadamente 9cm x 9cm com margem */
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.4s;
+}
+
+.galeria-imagem img:hover {
+    transform: scale(1.1); /* efeito de zoom ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .galeria-imagem img {
+        width: calc(50% - 30px); /* aproximadamente 9cm x 9cm com margem */
+    }
+}
+
+.galeriadefotos img {
+    animation: galeriaCarousel 4s infinite; /* efeito de transição em 4 segundos de uma foto para outra */
+    position: absolute; /* posiciona as imagens sobrepostas */
+    top: 0; /* alinha as imagens ao topo da galeria */
+    left: 0; /* alinha as imagens à esquerda da galeria */
+    z-index: 1; /* define a ordem de sobreposição das imagens */
+}
+
+@keyframes galeriaCarousel {
+    0%, 100% {
+        opacity: 1; /* define a opacidade inicial e final */
+    }
+    25%, 50% {
+        opacity: 0; /* define a opacidade durante a transição */
+    }
+    75% {
+        opacity: 1; /* define a opacidade durante a transição */
+    }
+}
+
+.galeriadefotos img:nth-child(1) {
+  background-image: url('image1.jpg');
+  z-index: 2;
+}
+
+.galeriadefotos img:nth-child(2) {
+
+  background-image: url('image2.jpg');
+  animation-delay: 4s;
+  z-index: 3;
+  
+}
+
+.galeriadefotos img:nth-child(3) {
+  background-image: url('image3.jpg');
+  animation-delay: 8s;
+  z-index: 4;
+}
+
+.galeriadefotos img:nth-child(4) {
+  background-image: url('image4.jpg');
+  animation-delay: 4s;
+  z-index: 5;
+}
+
+.galeriadefotos img:nth-child(5) {
+  background-image: url('image5.jpg');
+  animation-delay: 8s;
+  z-index: 6;
+}
+
+.galeriadefotos img:nth-child(6) {
+  background-image: url('image6.jpg');
+  animation-delay: 4s;
+  z-index: 7;
+}
+
+.galeriadefotos img:nth-child(7) {
+  background-image: url('image7.jpg');
+  animation-delay: 8s;
+  z-index: 8;
+}
+
+.galeriadefotos img:nth-child(8) {
+  background-image: url('image8.jpg');
+  animation-delay: 4s;
+  z-index: 9;
+}
+
+.galeriadefotos img:nth-child(9) {
+  background-image: url('image9.jpg');
+  animation-delay: 8s;
+  z-index: 1;
+}
+
+
+#contato {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
